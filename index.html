@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Delivery Company</title>
+        <link rel="stylesheet" href="food.css">
+    </head>
+    <body>
+        <header>
+            <marquee direction="right" loop="" behaviour="alternate" style="color: black; font-size: larger;"> Your favorite FOODIE DELIVERY is Here!! Order your food! </marquee>
+            <h1>Foodie Delivery</h1>
+            <nav>
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#menu">Menu</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home">
+            <h1>Welcome to Foodie Delivery </h1>
+            <p> Order your favorite food from the comfort of your home! </p>
+            <button onclick="showMenu()"> View Menu </button>
+        </section>
+
+        <h1 style="text-align: center;">Menu</h1>
+        <section id="menu">
+            <div class="food-item">
+                <img src="food1.jpg" alt="Food 1">
+                <div class="food-item-details">
+                    <h2 style="text-align: center;"> Pizza </h2>
+                    <p>Margharitta Pizza with thin crust and cheese </p>
+                    <label for="food1"> Choose the size: </label>
+                    <select name="food1" id="food1">
+                        <option value="small"> Small </option>
+                        <option value="medium"> Medium </option>
+                        <option value="large"> Large </option>
+                    </select>
+                    <p> ₹350.00 </p>
+                    <label for="dish1-quantity"> Quantity:</label>
+                    <input type="number" id="dish1-quantity" name="dish1-quantity" min="1" value="1">
+                    <button class="order-btn" onclick="orderFood('Pizza',350.00,document.getElementById('dish1-quantity'))">Order Now</button>
+                </div>
+            </div>
+
+            <div class="food-item">
+                <img src="food2.jpg" alt="Food 2">
+                <div class="food-item-details">
+                    <h2 style="text-align: center;"> Biriyani </h2>
+                    <p> Chicken biriyani with 1 boiled egg, chicken gravy and onion raitha </p>
+                    <p> ₹240.00 </p>
+                    <label for="dish2-quantity"> Quantity:</label>
+                    <input type="number" id="dish2-quantity" name="dish2-quantity" min="1" value="1">
+                    <button class="order-btn" onclick="orderFood('Biriyani',240.00,document.getElementById('dish2-quantity'))">Order Now</button>
+                </div>
+            </div>
+
+            <div class="food-item">
+                <img src="food3.jpg" alt="Food 3">
+                <div class="food-item-details">
+                    <h2 style="text-align: center;">Burger</h2>
+                    <p>Chicken burger with 1 slice of cheese</p>
+                    <p>Rate: ₹180.00</p>
+                    <label for="dish3-quantity"> Quantity:</label>
+                    <input type="number" id="dish3-quantity" name="dish3-quantity" min="1" value="1">
+                    <button class="order-btn" onclick="orderFood('Burger',180.00,document.getElementById('dish3-quantity'))">Order Now</button>
+                </div>
+            </div>
+
+            <div class="food-item">
+                <img src="food4.jpg" alt="Food 4">
+                <div class="food-item-details">
+                    <h2 style="text-align: center;">Ice cream</h2>
+                    <p>4 scoops of Ice cream </p>
+                    <p>Rate: ₹100.00</p>
+                    <label for="dish4-quantity">Quantity:</label>
+                    <input type="number" id="dish4-quantity" name="dish4-quantity" min="1" value="1">
+                    <button class="order-btn" onclick="orderFood('Ice cream', 100.00,document.getElementById('dish4-quantity'))">Order Now</button>
+                </div>
+            </div>  
+
+        </section>
+
+        <section id="about">
+            <h1 style="text-align: center;">About Us</h1>
+            <p>Your go-to food delivery service with a wide range of options.</p>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>email address: foodiedelivery@gmail.com </p>
+        </section>
+        <script src="script.js"></script>
+        
+        <footer>
+            &COPY;22BRS1183
+        </footer>
+    </body>
+</html>
